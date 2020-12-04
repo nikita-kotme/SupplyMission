@@ -15,7 +15,6 @@ function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
 	
-
 	packageSprite=createSprite(width/2, 80, 10,10);
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
@@ -42,7 +41,6 @@ function setup() {
  	boxPosition=width/2-100
  	boxY=610;
 
-
  	boxleftSprite=createSprite(boxPosition, boxY, 20,100);
  	boxleftSprite.shapeColor=color(255,0,0);
 
@@ -61,24 +59,18 @@ function setup() {
  	boxRightBody = Bodies.rectangle(boxPosition+200-20 , boxY, 20,100 , {isStatic:true} );
  	World.add(world, boxRightBody);
 
-
 	Engine.run(engine);
   
 }
-
 
 function draw() {
   rectMode(CENTER);
   background(0);
  
   packageSprite.x= packageBody.position.x 
-  packageSprite.y= packageBody.position.y 
+  packageSprite.y= packageBody.position.y  
 
-  
   drawSprites();
-  
-  
- 
 }
 
 function keyPressed() {
@@ -99,6 +91,3 @@ function keyPressed() {
     
   }
 }
-
-
-
